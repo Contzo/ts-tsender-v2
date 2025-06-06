@@ -4,14 +4,6 @@ import { FaGithub } from "react-icons/fa";
 import { useState, useEffect, type ReactNode } from "react";
 
 export default function Header() {
-    const [hasMounted, setHasMounted] = useState(false);
-
-  // Prevent hydration issues by deferring RainbowKitProvider rendering
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  if (!hasMounted) return null; // Or a fallback/loading component
   return (
     <header className="w-full bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
